@@ -108,13 +108,13 @@ let users = [
         password: 'Y33im77'
     },
 
-     {
+    {
         name: 'Igor',
         username: 'igorLeg',
         password: 'Legolas27369'
     },
 
-     {
+    {
         name: 'Ludmila',
         username: 'ludaPro',
         password: 'Lu97pas1'
@@ -126,6 +126,21 @@ let users = [
         password: 'ura04R30'
     }
 ];
+// Два варіанти виведення в консоль. Перший все в один рядок, інший кожен окремо. Відпишіть як правильніше. Дякую
+
+/*
+console.log(users[0].password,
+            users[1].password,
+            users[2].password,
+            users[3].password,
+            users[4].password,
+            users[5].password,
+            users[6].password,
+            users[9].password,
+            users[7].password,
+            users[8].password
+);
+*/
 console.log(users[0].password);
 console.log(users[1].password);
 console.log(users[2].password);
@@ -145,48 +160,98 @@ console.log(users[8].password);
 
 let temperatureInfo = [
     monday = {
-        morning: '11 degrees',
-        day: '22 degrees',
-        evening: '19 degrees'
+        morningTemp: 11,
+        dayTemp: 22,
+        eveningTemp: 19
     },
 
     tuesday = {
-        morning: '11 degrees',
-        day: '20 degrees',
-        evening: '16 degrees'
+        morningTemp: 11,
+        dayTemp: 20,
+        eveningTemp: 16
     },
 
     wednesday = {
-        morning: '10 degrees',
-        day: '18 degrees',
-        evening: '14 degrees'
+        morningTemp: 10,
+        dayTemp: 18,
+        eveningTemp: 14
     },
 
     thursday = {
-        morning: '7 degrees',
-        day: '14 degrees',
-        evening: '12 degrees'
+        morningTemp: 7,
+        dayTemp: 14,
+        eveningTemp: 12
     },
 
     friday = {
-        morning: '13 degrees',
-        day: '18 degrees',
-        evening: '15 degrees'
+        morningTemp: 13,
+        dayTemp: 18,
+        eveningTemp: 15
     },
 
     saturday = {
-        morning: '12 degrees',
-        day: '17 degrees',
-        evening: '14 degrees'
+        morningTemp: 12,
+        dayTemp: 17,
+        eveningTemp: 14
     },
 
     sunday = {
-        morning: '9 degrees',
-        day: '16 degrees',
-        evening: '14 degrees'
+        morningTemp: 9,
+        dayTemp: 16,
+        eveningTemp: 14
     }
 ];
 
 
-// Завдання 6
-////
+//Інший варіант, відпишіть в телеграм потім, який варіант буде правильніший. Дякую
+
+/*let users = [
+    {
+        id: 'monday',
+            morningTemp: 11,
+            dayTemp: 22,
+            eveningTemp: 19
+    },
+
+    {
+        id: 'tuesday',
+            morningTemp: 11,
+            dayTemp: 20,
+            eveningTemp: 16
+    },
+
+    {
+        id: 'wednesday',
+            morningTemp: 10,
+            dayTemp: 18,
+            eveningTemp: 14
+    },
+
+    {
+        id: 'thursday',
+            morningTemp: 7,
+            dayTemp: 14,
+            eveningTemp: 12
+    },
+
+    {
+        id: 'friday',
+            morningTemp: 13,
+            dayTemp: 18,
+            eveningTemp: 15
+    },
+
+    {
+        id: 'saturday',
+            morningTemp: 12,
+            dayTemp: 17,
+            eveningTemp: 14
+    },
+
+    {
+        id: 'sunday',
+            morningTemp: 9,
+            dayTemp: 16,
+            eveningTemp: 14
+    }
+];*/
