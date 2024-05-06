@@ -34,30 +34,30 @@ let book4 = {
     title: 'The Surgeon',
     pageCount: 352,
     genre: 'detective',
-    authors: [
-        name = 'Tess Gerritsen',
-        age = 70
-    ]
+    authors: {
+        name: 'Tess Gerritsen',
+        age: 70
+    }
 };
 
 let book5 = {
     title: 'Thirteen Reasons Why',
     pageCount: 288,
     genre: 'novel',
-    authors: [
-        name = 'Jay Asher',
-        age = 48
-    ]
+    authors: {
+        name: 'Jay Asher',
+        age: 48
+    }
 };
 
 let book6 = {
     title: 'The Martian',
     pageCount: 448,
     genre: 'science fiction',
-    authors: [
-        name = 'Andy Weir',
-        age = 51
-    ]
+    authors: {
+        name: 'Andy Weir',
+        age: 51
+    }
 };
 
 
@@ -158,6 +158,7 @@ console.log(users[8].password);
 ////   Нормальних варіантів опису - 2.
 ////   Варіант, коли в вас буде одновимірний масив з 21 значенням вичключаємо одразу
 
+/*
 let temperatureInfo = [
     monday = {
         morningTemp: 11,
@@ -201,11 +202,13 @@ let temperatureInfo = [
         eveningTemp: 14
     }
 ];
+*/
 
 
 //Інший варіант, відпишіть в телеграм потім, який варіант буде правильніший. Дякую
 
-/*let users = [
+/*
+let temperatureInfo = [
     {
         id: 'monday',
             morningTemp: 11,
@@ -254,4 +257,79 @@ let temperatureInfo = [
             dayTemp: 16,
             eveningTemp: 14
     }
-];*/
+];
+*/
+
+// Варіант 3
+
+let tempWeekInfo = [
+    {
+        id: 'monday',
+        dayInfo: [
+            {timeOfDay: 'morning', temp: 11},
+            {timeOfDay: 'day', temp: 22},
+            {timeOfDay: 'evening', temp: 19},
+            {timeOfDay: 'night', temp: 10}
+        ]
+    },
+
+    {
+        id: 'tuesday',
+        dayInfo: [
+            {timeOfDay: 'morning', temp: 11},
+            {timeOfDay: 'day', temp: 20},
+            {timeOfDay: 'evening', temp: 16},
+            {timeOfDay: 'night', temp: 9}
+        ]
+    },
+
+    {
+        id: 'wednesday',
+        dayInfo: [
+            {timeOfDay: 'morning', temp: 10},
+            {timeOfDay: 'day', temp: 18},
+            {timeOfDay: 'evening', temp: 14},
+            {timeOfDay: 'night', temp: 7}
+        ]
+    },
+
+    {
+        id: 'thursday',
+        dayInfo: [
+            {timeOfDay: 'morning', temp: 7},
+            {timeOfDay: 'day', temp: 14},
+            {timeOfDay: 'evening', temp: 12},
+            {timeOfDay: 'night', temp: 7}
+        ]
+    },
+
+    {
+        id: 'friday',
+        dayInfo: [
+            {timeOfDay: 'morning', temp: 13},
+            {timeOfDay: 'day', temp: 18},
+            {timeOfDay: 'evening', temp: 15},
+            {timeOfDay: 'night', temp: 10}
+        ]
+    },
+
+    {
+        id: 'saturday',
+        dayInfo: [
+            {timeOfDay: 'morning', temp: 12},
+            {timeOfDay: 'day', temp: 17},
+            {timeOfDay: 'evening', temp: 14},
+            {timeOfDay: 'night', temp: 11}
+        ]
+    },
+
+    {
+        id: 'sunday',
+        dayInfo: [
+            {timeOfDay: 'morning', temp: 9},
+            {timeOfDay: 'day', temp: 16},
+            {timeOfDay: 'evening', temp: 14},
+            {timeOfDay: 'night', temp: 11}
+        ]
+    }
+];
