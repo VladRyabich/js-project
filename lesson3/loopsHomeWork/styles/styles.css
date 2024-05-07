@@ -1,0 +1,37 @@
+/*  Завдання 5  */
+
+.list-items {
+    padding: 20px;
+
+    list-style: number;
+}
+
+
+/*  Завдання 6  */
+.product-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.product-card {
+    padding: 10px;
+
+    border: 2px solid deepskyblue;
+    border-radius: 10px;
+
+    background-color: lightskyblue;
+}
+
+.product-title {
+    text-align: center;
+}
+
+.product-image {
+    width: 200px;
+    height: 200px;
+
+    border-radius: 10px;
+
+    background-color: #fff;
+}

@@ -1,0 +1,21 @@
+.wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+
+    margin: 10px;
+}
+
+.post-card {
+    text-align: center;
+
+    padding: 10px;
+
+    border: 2px solid darkslateblue;
+
+    background-color: #fff5f3;
+}
+
+.post-card h3 {
+    color: #190f52;
+}
