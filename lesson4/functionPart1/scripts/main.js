@@ -170,22 +170,22 @@ swap(swapNum, 0, 1);
 
 //// - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 //     Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250-
-function exchange(sumUAH, currencyValues, exchangeCurrency) {
-    for (let i = 0; i < currencyValues.length; i++) {
-        if (currencyValues[0].currency === exchangeCurrency) {
-            let result = sumUAH / currencyValues[0].value;
-            console.log(result);
-            break
-        } else if (currencyValues[1].currency === exchangeCurrency) {
-            let result = sumUAH / currencyValues[1].value;
-            console.log(result);
-            break
-        } else {
-            console.log('Некоректно введена валюта!');
-            break
-        }
-    }
-} // Довго сидів над цим завданням. Вийшло зробити так. Думаю це не правильний варіант.
+// function exchange(sumUAH, currencyValues, exchangeCurrency) {
+//     for (let i = 0; i < currencyValues.length; i++) {
+//         if (currencyValues[0].currency === exchangeCurrency) {
+//             let result = sumUAH / currencyValues[0].value;
+//             console.log(result);
+//             break
+//         } else if (currencyValues[1].currency === exchangeCurrency) {
+//             let result = sumUAH / currencyValues[1].value;
+//             console.log(result);
+//             break
+//         } else {
+//             console.log('Некоректно введена валюта!');
+//             break
+//         }
+//     }
+// } // Довго сидів над цим завданням. Вийшло зробити так. Думаю це не правильний варіант.
   // Якщо можна фітбек по ньому, і показати як було б логічно побудувати функцію.
 
 exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD');
