@@ -124,7 +124,7 @@ usersArr(users);
 //             minNum = numArrElement;
 //         }
 //     }
-//     console.log(minNum);
+//     return console.log(minNum);
 // }
 
 function smallNumber(numArr) {
