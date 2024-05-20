@@ -80,50 +80,49 @@ console.log('==================================');
 ////   -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
 ////   -- changeYear (newValue) - змінює рік випуску на значення newValue
 ////   -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
-
-
-function Car(model, brand, year, maxSpeed, engineCapacity) {
+function Car (model, brand, year, maxSpeed, engineCapacity) {
     this.model = model;
     this.brand = brand;
     this.year = year;
     this.maxSpeed = maxSpeed;
     this.engineCapacity = engineCapacity;
 
-    this.drive = function() {
+    this.drive = function () {
         console.log(`Їдемо зі швидкістю ${this.maxSpeed} на годину`);
-    };
+    }
 
-    this.info = function() {
-        for (let field in this) {
-            if (typeof this[field] !== 'function') {
-                console.log(`${field} - ${this[field]}`);
-            }
-        }
-    };
+    this.info = function () {
+        console.log(`Модель автомобіля - "${this.model}"`);
+        console.log(`Марка автомобіля - "${this.brand}"`);
+        console.log(`Рік випуску - "${this.year}"`);
+        console.log(`Максимальна швидкість - "${this.maxSpeed}"`);
+        console.log(`Об'єм двигуна - "${this.engineCapacity}"`);
+    }
 
-    this.increaseMaxSpeed = function(newSpeed) {
+    this.increaseMaxSpeed = function (newSpeed) {
         this.maxSpeed += newSpeed;
-    };
+    }
 
-    this.changeYear = function(newValue) {
+    this.changeYear = function (newValue) {
         this.year = newValue;
-    };
+    }
 
-    this.addDriver = function(driver) {
+    this.addDriver = function (driver) {
         this.driver = driver;
-    };
+    }
 }
 
-let myCar = new Car('Qashqai', 'Nissan', 2018, 140, '1.2');
-myCar.drive();
-myCar.info();
-myCar.increaseMaxSpeed(30);
-myCar.drive();
-myCar.changeYear(2021);
-myCar.info();
-myCar.addDriver({ name: 'John', age: 27, license: 'A1' }); - // згенеровано чатом GPT
+let myCar = new Car ('Qashqai', 'Nissan', 2018, 140, 1.2)
 
-console.log(myCar.driver);
+myCar.increaseMaxSpeed(30); //максимальна швидкість збільшена до 170
+myCar.changeYear(2021);//змінили рік писуку на 2021
+
+myCar.addDriver({name: 'Vlad', certification: 'A1', age: 27});//додали інформацію про водія
+
+myCar.drive();
+myCar.info();
+
+console.log(myCar);
 console.log('==================================');
 //-- (Те саме, тільки через клас)
 // Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
@@ -132,41 +131,52 @@ console.log('==================================');
 //     -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
 //     -- changeYear (newValue) - змінює рік випуску на значення newValue
 //     -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
-class Cars{
+
+class Car2 {
     constructor(model, brand, year, maxSpeed, engineCapacity) {
         this.model = model;
-        this.manufacturer = brand;
+        this.brand = brand;
         this.year = year;
         this.maxSpeed = maxSpeed;
-        this.engineVolume = engineCapacity;
-        this.driver = null;
+        this.engineCapacity = engineCapacity;
     }
 
     drive() {
-        console.log(`Їдемо зі швидкістю ${this.maxSpeed} на годину`);
+        console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)
     }
 
     info() {
-        for (let field in this) {
-            if (typeof this[field] !== 'function') {
-                console.log(`${field} - ${this[field]}`);
-            }
-        }
+        console.log(`Модель автомобіля - "${this.model}"`);
+        console.log(`Марка автомобіля - "${this.brand}"`);
+        console.log(`Рік випуску - "${this.year}"`);
+        console.log(`Максимальна швидкість - "${this.maxSpeed}"`);
+        console.log(`Об'єм двигуна - "${this.engineCapacity}"`);
     }
 
-    increaseMaxSpeed(newSpeed) {
+    increaseMaxSpeed (newSpeed) {
         this.maxSpeed += newSpeed;
     }
 
-    changeYear(newValue) {
+    changeYear (newValue) {
         this.year = newValue;
     }
 
-    addDriver(driver) {
+    addDriver (driver) {
         this.driver = driver;
     }
 }
 
+let myCar2 = new Car2('Kangoo', 'Renault', 2010, 120, 1.6);
+
+myCar2.increaseMaxSpeed(20);
+myCar2.changeYear(2012);
+
+myCar2.addDriver({name: 'Ura', certification: 'A1', age: 52});
+
+myCar2.drive();
+myCar2.info();
+
+console.log(myCar2);
 console.log('==================================');
 
 //--створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
@@ -181,124 +191,95 @@ class Cinderella {
     }
 }
 
+const cinderellas = [
+    new Cinderella('Alice', 20, 36),
+    new Cinderella('Bella', 22, 37),
+    new Cinderella('Cindy', 25, 38),
+    new Cinderella('Diana', 19, 39),
+    new Cinderella('Eva', 21, 34),
+    new Cinderella('Fiona', 23, 36),
+    new Cinderella('Grace', 24, 37),
+    new Cinderella('Helen', 26, 38),
+    new Cinderella('Ivy', 18, 39),
+    new Cinderella('Jane', 27, 35) // Створено чатом GPT
+];
 class Prince {
-    constructor(name, age, foundShoe) {
+    constructor(name, age, foundShoeSize) {
         this.name = name;
         this.age = age;
-        this.foundShoe = foundShoe;
+        this.foundShoeSize = foundShoeSize;
+    }
+
+    findCinderellaByLoop(cinderellas) {
+        for (let cinderella of cinderellas) {
+            if (cinderella.footSize === this.foundShoeSize) {
+                return cinderella;
+            }
+        }
+    }
+
+    findCinderellaByFind(cinderellas) {
+        return cinderellas.find(cinderella => cinderella.footSize === this.foundShoeSize);
     }
 }
 
-let cinderellas = [];
-for (let i = 1; i <= 10; i++) {
-    let cinderella = new Cinderella(`Cinderella ${i}`, Math.floor(Math.random() * 30) + 18, Math.floor(Math.random() * 10) + 20);
-    cinderellas.push(cinderella);
-}
+let prince = new Prince('Charming', 27, 34);
 
-let prince = new Prince('Prince Charming', 25, Math.floor(Math.random() * 10) + 20);
-
-let foundCinderella = null;
-for (let i = 0; i < cinderellas.length; i++) {
-    if (cinderellas[i].footSize === prince.foundShoe) {
-        foundCinderella = cinderellas[i];
-        break;
-    }
-}
-
-if (foundCinderella) {
-    console.log(`Принц ${prince.name} знайшов свою попелюшку ${foundCinderella.name}`);
+let foundCinderellaByLoop = prince.findCinderellaByLoop(cinderellas);
+if (foundCinderellaByLoop) {
+    console.log(`Попелюшка знайдена за допомогою циклу: ${foundCinderellaByLoop.name}, Вік: ${foundCinderellaByLoop.age}, Розмір ноги: ${foundCinderellaByLoop.footSize}`);
 } else {
-    console.log('Принц не знайшов свою попелюшку');
+    console.log('Попелюшка не знайдена!');
 }
 
-let foundCinderellaWithFind = cinderellas.find(cinderella => cinderella.footSize === prince.foundShoe);
-
-if (foundCinderellaWithFind) {
-    console.log(`Принц ${prince.name} знайшов свою попелюшку ${foundCinderellaWithFind.name}`);
+let foundCinderellaByFind = prince.findCinderellaByFind(cinderellas);
+if (foundCinderellaByFind) {
+    console.log(`Попелюшка знайдена за допомогою find: ${foundCinderellaByFind.name}, Вік: ${foundCinderellaByFind.age}, Розмір ноги: ${foundCinderellaByFind.footSize}`);
 } else {
-    console.log('Принц не знайшов свою попелюшку');
+    console.log('Попелюшка не знайдена!');
 }
 
 console.log('==================================');
 
 //// -Через Array.prototype. створити власний foreach
-if (!Array.prototype.myForEach) {
-    // Додаємо метод до прототипу Array
-    Array.prototype.myForEach = function(callback, thisArg) {
-        // Перевіряємо, чи передана callback функція
-        if (typeof callback !== 'function') {
-            throw new TypeError(callback + ' is not a function');
-        }
+let arr = [1, 2, 3, 4, 5];
 
-        let len = this.length;
-
-        for (let i = 0; i < len; i++) {
-            if (i in this) { // Перевіряємо, чи елемент існує в масиві
-                callback.call(thisArg, this[i], i, this);
-            }
-        }
-    };
-}
-
-const array = [1, 2, 3, 4, 5];
-
-array.myForEach(function(element, index, array) {
-    console.log('Element: ' + element + ', Index: ' + index);
+Array.prototype.myForEach = function(callback) {
+    for (let i = 0; i < this.length; i++) {
+        callback(this[i], i, this);
+    }
+};
+console.log('ForEach:');
+arr.myForEach((element, index) => {
+    console.log(`Index: ${index}, Element: ${element}`); // індекс від 0, елементи від 1
 });
 
 console.log('==================================');
 
 //// -Через Array.prototype. створити власний filter
-if (!Array.prototype.myFilter) {
-    Array.prototype.myFilter = function(callback, thisArg) {
-        if (typeof callback !== 'function') {
-            throw new TypeError(callback + ' is not a function');
+Array.prototype.myFilter = function(callback) {
+    let result = [];
+    for (let i = 0; i < this.length; i++) {
+        if (callback(this[i], i, this)) {
+            result.push(this[i]);
         }
+    }
+    return result;
+};
+console.log('Filter:');
+let filteredArr = arr.myFilter(element => element > 1);
+console.log(filteredArr); //[2, 3, 4, 5]
 
-        let len = this.length;
-
-        let result = [];
-
-        for (let i = 0; i < len; i++) {
-            if (i in this) { // Перевіряємо, чи елемент існує в масиві
-                if (callback.call(thisArg, this[i], i, this)) {
-                    result.push(this[i]);
-                }
-            }
-        }
-        return result;
-    };
-}
-
-const array1 = [5, 2, 1, 6, 8, 3, 7, 4];
-
-const filteredArray = array1.myFilter(function(element, index, array) {
-    return element > 4;
-});
-
-console.log(filteredArray);
 console.log('==================================');
 
 //// -Через Array.prototype. створити власний map
 Array.prototype.myMap = function(callback) {
-    if (typeof callback !== 'function') {
-        throw new TypeError(`${callback} is not a function`);
-    }
-
-    const result = [];
-
+    let result = [];
     for (let i = 0; i < this.length; i++) {
-
         result.push(callback(this[i], i, this));
     }
     return result;
 };
-
-
-const arr = [10, 20, 30, 40, 50];
-
-const mappedArr = arr.myMap(function(element, index, array) {
-    return element * 2;
-});
-
-console.log(mappedArr);
+console.log('Map:');
+let mappedArr = arr.myMap(element => element * 5);
+console.log(mappedArr); //[5, 10, 15, 20, 25]
