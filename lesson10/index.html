@@ -9,7 +9,67 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <h1>Форма з полями</h1>
+    <form class="form">
+        <label for="name">Ім'я:</label>
+        <input type="text" id="name" name="name"><br><br>
 
+        <label for="surname">Прізвище:</label>
+        <input type="text" id="surname" name="surname"><br><br>
+
+        <label for="age">Вік:</label>
+        <input type="number" id="age" name="age"><br><br>
+
+        <button type="button" onclick="displayObject()">Відправити</button>
+    </form>
+
+    <div id="object-container"></div>
+
+    <hr>
+
+    <h2>Перегляд об'єктів</h2>
+    <div class="object-container"></div>
+    <button id="prev-btn" disabled>Prev</button>
+    <button id="next-btn">Next</button>
+
+    <hr>
+
+    <div id="text">Перевірка на зникнення тексту</div>
+    <button id="hideButton">Приховати текст</button>
+
+    <hr>
+
+    <label for="ageInput">Введіть ваш вік:</label>
+    <input type="number" id="ageInput" min="0">
+    <button id="checkAgeButton">Перевірити вік</button>
+    <div id="ageMessage"></div>
+
+    <hr>
+
+    <div class="table-wrapper">
+        <label for="rowsInput" class="label">Кількість рядків:</label>
+        <input type="number"
+               class="rows-input"
+               id="rowsInput"
+               min="1"
+               value="1">
+
+        <label for="colsInput" class="label">Кількість стовпців:</label>
+        <input type="number"
+               class="cols-input"
+               id="colsInput"
+               min="1"
+               value="1">
+
+        <label for="contentInput" class="label">Вміст ячеєк:</label>
+        <input type="text"
+               class="content-input"
+               id="contentInput"
+               value="Ячейка">
+
+        <button id="createTableButton">Створити таблицю</button>
+        <div id="tableContainer"></div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>

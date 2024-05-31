@@ -1,0 +1,25 @@
+hr {
+    margin: 40px 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.object-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.object-card {
+    text-align: center;
+    width: 250px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.table-wrapper {
+    display: flex;
+    flex-direction: column;
+}
