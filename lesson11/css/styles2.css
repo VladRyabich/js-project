@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+body  {
+
+}
+
+section {
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+ol, ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0 auto;
+}
+
+img {
+    width: 90%;
+    margin-top: 20px;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    margin-top: 20px;
+}
+
+.dish-item {
+    display: flex;
+
+}
+
+.dish-title {
+    font-size: 24px;
+
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.id-title {
+    font-size: 14px;
+}
+
+.info-subtitle {
+    font-weight: 600;
+}
+
+.info-text {
+    margin-bottom: 5px;
+}
+
+.recipe-block {
+    margin-top: 40px;
+}
+
+.ingredients-list {
+    list-style: circle;
+
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding-left: 20px;
+}
+
+.instructions-list {
+    list-style: number;
+
+    margin-top: 10px;
+    padding-left: 20px;
+}
